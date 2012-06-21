@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset = "utf-8">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }} " />
+<script src="{{ url_for('static',filename='web1.js') }}"></script>
+<title>TwiReput</title>
+
+</head>
+<body>
+
+<div id="maindiv">
+
+	
+
+		
+		<div id="header">
+		TwiReput
+		</div>
+	
+		<div id="menu">
+			 <div id="p1" class = "q">Rate Me<div id="i1" class = "indiv">Get your Twitte score</div></div>
+			 <div id="p2" class = "q">How<div id="i2" class = "indiv">How we calculate the score</div></div>
+			 <div id="p3" class = "q">About<div id="i3" class = "indiv">About us</div></div>
+		 </div>
+		 
+
+
+	<div id="section">
+	
+	</div>
+	<div id="section2">
+	We need some information from your Twitter account!<br />Please allow us by going to the following link:<br />
+	<form action="{{ url_for('login') }}" method="post">
+ 	<a href= "{{ url }}" target="_blank" value="hello" id="url"><input type="submit" id="login" value = "Get Pin" /></a>
+	<input type="hidden" value="{{ url }}" name = "url1" />
+	</form>
+	</div>
+
+</div>
+</body>
+</html>

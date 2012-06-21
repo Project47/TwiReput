@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset = "utf-8">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }} " />
+<script src="{{ url_for('static',filename='pinjs.js') }}"></script>
+
+<title>TwiReput</title>
+
+</head>
+<body>
+
+<div id="maindiv">
+
+	<div id="header">
+	TwiReput
+	</div>
+	
+	<div id="menu">
+		 <div id="p1" class = "q">Rate Me<div id="i1" class = "indiv">Get your Twitte score</div></div>
+		 <div id="p2" class = "q">How<div id="i2" class = "indiv">How we calculate the score</div></div>
+		 <div id="p3" class = "q">About<div id="i3" class = "indiv">About us</div></div>
+	 </div>
+	 
+	<div id="section">
+	
+	</div>
+
+	<div id="section3">
+		Enter the pin that you got from your Twitter account:<br />
+		<form action="{{ url_for('index') }}" method="post">
+		 	<label id="pin1">Enter Pin:</label> <input type="text" id="lab1" name="user_pin" />
+			<button type="submit" id="login" class = "loginbutton">Get my rating</button>
+			<!--<label><br />If the Twitter url has not yet opened, click <a href= "{{ url }}" target="_blank" value="hello" id="url">here<a/></label>-->
+		
+		</form>		
+		<img id="image" src="{{ url_for('static',filename='loading.gif') }}" height=200px width=600px alt="no image"/>
+	</div>
+
+</div>
+	
+<div id="maindiv">
+If the Twitter url has not yet opened, click <a href= "{{ url }}" target="_blank" id="url" >here<a/>
+</div>
+
+</body>
+</html>
