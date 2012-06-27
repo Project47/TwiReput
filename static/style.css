@@ -86,11 +86,6 @@ display: box;
 font-size:20pt;
 border: none;
 border-radius:5px;
-/*
-box-pack:center;
--webkit-box-pack:center;
--moz-box-pack:center;
-margin-top:20px;  */
 width:980px;
 text-align:left;
 }
@@ -302,7 +297,8 @@ height:120px;
 	  -webkit-box-flex: 1;
 border: 4px solid #5FB7E3;
 border-radius:25px;
-margin:50px;
+padding:3px;
+margin:5px;
 
 }
 
@@ -373,3 +369,11 @@ height:400px;
 padding:5px;
 margin: 5px;
 }
+
+#error{
+background-image:url('bkgr.png');
+text-align:center;
+font-size:34pt;
+}
+
+

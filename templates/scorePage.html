@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
 <meta charset = "utf-8">
-<
+
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }} " />
 <script src="{{ url_for('static',filename='web1.js') }}"></script>
-<!--     
-<link rel="stylesheet" type="text/css" href="style.css" />
-<script src="web1.js"></script>
--->
 
 <title>TwiReput</title>
 
 </head>
 <body>
-
 <div id="maindiv">
 
 	
@@ -41,7 +36,8 @@
 		<div id="namediv">
 			<div id="imageurl"><img src="{{ url }}" alt="none" width="150px" height="150px" /></div>
 			<div id="name" style="font-size:30px;">{{ namee }}<br /><form action="{{ url_for('logout') }}" method="post"><button type="submit" id="login">Logout</button><form></div>
-			<div id="scorediv" >Your Score is:<br /> {{ score }}</div>
+			<div id="scorediv" >Score:<br /> {{ score }}</div>
+			<div id="scorediv" >Rank: {{ rank }}<br />Out of: {{ total_ranks }}</div>
 			
 		</div>
 		
@@ -56,7 +52,7 @@
 			</div>
 						
 			<div id="lowerDiv" class="vert2">
-				<p style="font-size:28px;">People You have influenced recently:</p>	
+				<p style="font-size:28px;">People you have influenced recently:</p>	
 				<div id="namediv1">
 					<div id="imageurl"><img src="{{ url1 }}" width="70px" height="70px" alt="  " /></div>
 					<div id="name" style="font-size:20px;">{{ infl1 }}</div>
