@@ -54,11 +54,16 @@ def calc_friends(folls,friend):
 		ratio_factor=13.0
 	else: 
 		ratio_factor=15.0
+<<<<<<< HEAD
 	friends_score = (followers/friends)*ratio_factor
+=======
+	friends_score = (friends/followers)*ratio_factor
+>>>>>>> 12df44735741d83e13a31c2a1849cc750d7e9977
 	if friends_score>15:
 		friends_score=15
 	return friends_score
 
+<<<<<<< HEAD
 def calc_tweet_ratio(retweets,tweets,total_tweets):	
 	if total_tweets==0:
 		return 0 			
@@ -77,6 +82,26 @@ def calc_tweet_ratio(retweets,tweets,total_tweets):
 	elif total_tweets<500000:
 		ratio_factor=24.0
 	elif total_tweets<1000000:
+=======
+def calc_tweet_ratio(retweets,tweets):	
+	if tweets==0:
+		return 0 			
+	if tweets<10:
+		ratio_factor=2.0
+	elif tweets<100:
+		ratio_factor=4.0
+	elif tweets<500:
+		ratio_factor=8.0
+	elif tweets<1000:
+		ratio_factor=12.0
+	elif tweets<50000:
+		ratio_factor=16.0
+	elif tweets<100000:
+		ratio_factor=20.0
+	elif tweets<500000:
+		ratio_factor=24.0
+	elif tweets<1000000:
+>>>>>>> 12df44735741d83e13a31c2a1849cc750d7e9977
 		ratio_factor=28.0
 	else:
 		ratio_factor=30.0
@@ -101,11 +126,17 @@ def calc_top_followers(followers_count,length):
 		k=k+1	
 	total=0
 	k=0
+<<<<<<< HEAD
 	while k<length:
 		total=total+followers_count[k]
 		k=k+1	
 	print "TOTAL FOLLOWERS"
 	print length
+=======
+	while k<length and k<5:
+		total=total+followers_count[k]
+		k=k+1		
+>>>>>>> 12df44735741d83e13a31c2a1849cc750d7e9977
 	if total<10:
 		return 1
 	elif total<100:
