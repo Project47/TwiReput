@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }} " />
+<title>
+TwiReput
+</title>
+</head>
+
+<body id="error">
+The {{ error }} occured.
+<div style="font-size:20pt">
+<br /> Click
+<a href="{{ url_for('logout') }}" >Here</a>
+ to retry!</div>
+</body>
+</html>

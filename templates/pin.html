@@ -20,11 +20,23 @@
 	<div id="menu">
 		 <div id="p1" class = "q">Rate Me<div id="i1" class = "indiv">Get your Twitte score</div></div>
 		 <div id="p2" class = "q">How<div id="i2" class = "indiv">How we calculate the score</div></div>
-		 <div id="p3" class = "q">About<div id="i3" class = "indiv">About us</div></div>
+		<div id="p4" class = "q">Top 10<div id="i4" class = "indiv">Top 10 users</div></div>
+			 <div id="p3" class = "q">About<div id="i3" class = "indiv">About us</div></div>
 	 </div>
 	 
 	<div id="section">
-	
+	<div id="top10" style="text-align:center;">
+	<table align="center" >	
+		<tr ><th id="scoretable">User</th><th id="scoretable">Score</th></tr>
+		{% for u in arr   %}
+		 <tr >	
+			{% for v in u   %}	
+			<td id="scoretable">{{ v }}</td>
+			{% endfor %}
+		</tr>
+		{% endfor %} 
+		</table> 
+		</div>
 	</div>
 
 	<div id="section3">
